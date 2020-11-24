@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+	float: none;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding: 80px;
+	text-align: left;
+	background: #FFFFFF;
+	float: none;
+	height: 200px;
+	
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+}
+
+.dropdown {
+
+  text-align: center;
+  display: inline;
+  float: left;
+  overflow: hidden;
+
+}
+
+.dropdown2 {
+
+  position: relative;
+  height:45px;
+
+}
+
+.dropdown .dropbtn {
+	width:100%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-align: left;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: grey;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 {
+  display: none;
+  position:relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+    right: -180px;
+	top: -45px;
+}
+
+
+
+
+/* Column container */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    width: 20%;
+    float: left;
+    height: 1000px;
+    overflow-y: scroll;
+
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 20%; /* IE10 */
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    float: left;
+}
+
+/* Main column */
+.main {
+    -ms-flex: 80%; /* IE10 */
+    flex: 80%;
+    background-color: white;
+    float: left;
+    height: 800px;
+    width: 80%;
+
+
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+    float: none;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+
+  }
+
+    .main {
+    width: auto;
+    height: auto;
+    max-height: 500px;
+    overflow-y: scroll;
+    float: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  .navbar .dropdown {
+    float: center;
+    width: 100%;
+    }
+   .dropdown-content {
+    float: center;
+    width: 100%;}
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+.button:hover {background-color: gray}
+
+.button:active {
+  background-color: lightgrey;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+	.Elboton {
+		height: 100px;
+	}
+	.button {
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+    .audi {
+	float: left;
+
+	}
+	.audio_des {
+	float: left;
+	vertical-align: top;
+	margin-left: 15px;
+	}
+
+	.audio{
+	width: 100%;
+	clear: both;
+	}
+    .fakeimg_user {
+	float: left;
+	margin: 10px;
+}
+     .usuarios {
+	 width: 100%;
+	   }
+    .clear {
+	clear: both;
+  }
+  #navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  #navbar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  #navbar a:hover {
+    color: #f1f1f1;
+  }
+  
+  #navbar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #row {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#row a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#row a:hover {
+  color: #f1f1f1;
+}
+
+#row .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
